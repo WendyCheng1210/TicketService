@@ -7,13 +7,14 @@ import com.amazonaws.services.sqs.AmazonSQS;
 import com.amazonaws.services.sqs.AmazonSQSClientBuilder;
 import com.amazon.sqs.javamessaging.SQSConnectionFactory;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.yanwen.consumer.service.ListenerService;
 
 import javax.jms.JMSException;
 import javax.jms.MessageConsumer;
 import javax.jms.Session;
 
-@SpringBootApplication(scanBasePackages = {"org.yanwen.consumer"})
+@SpringBootApplication(scanBasePackages = {"org.yanwen"})
 public class ConsumerApplication {
     public static void main(String[] args) throws JMSException, InterruptedException {
         AmazonSQS sqsClient = AmazonSQSClientBuilder.standard()
