@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mvc" />
+        <module name="consumer" />
+        <module name="persistence" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="consumer (1)" target="1.8" />
+      <module name="consumer (2)" target="1.8" />
+      <module name="persistence" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="TicketService" options="-parameters" />
+      <module name="consumer" options="-parameters" />
+      <module name="consumer (1)" options="-parameters" />
+      <module name="consumer (2)" options="-parameters" />
+      <module name="mvc" options="-parameters" />
+      <module name="persistence" options="" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,4 @@
+org/yanwen/consumer/service/ListenerService.class
+org/yanwen/consumer/ConsumerApplication.class
+org/yanwen/consumer/service/SQSMessageService.class
+org/yanwen/consumer/config/JmsConfig.class
