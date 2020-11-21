@@ -40,8 +40,10 @@ public class ListenerService implements MessageListener {
                 long seatID = jsonSeats.getJSONObject(i).getLong("id");
                 Seat seat = new Seat();
                 seat.setId(seatID);
-                if (!seatReserved(seat))
-                    reverseSeatStatus(seat);
+                if (seatReserved(seat))
+                    setSeatStatus(seat,Status.RESERVED);
+                else
+                    setSeatStatus(seat, Status.AVAILABLE);
             }
 
         }catch (JMSException e){
@@ -56,8 +58,8 @@ public class ListenerService implements MessageListener {
         return !user.getConfirmation_code().equals("");
     }
 
-    private void reverseSeatStatus(Seat seat){
-        seat.setStatus(Status.AVAILABLE);
+    private void setSeatStatus(Seat seat, Status status){
+        seat.setStatus(status);
         seatService.update(seat);
     }
 
