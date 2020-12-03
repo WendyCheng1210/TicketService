@@ -4,21 +4,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Import;
-import org.springframework.stereotype.Service;
-import org.yanwen.config.HibernateConfig;
-import org.yanwen.model.Seat;
-
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.stereotype.Component;
+import org.yanwen.core.domain.Seat;
+import org.yanwen.core.domain.Status;
+import org.yanwen.core.domain.User;
+import org.yanwen.core.service.jms.SeatService;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.TextMessage;
 
-import org.yanwen.model.Status;
-import org.yanwen.model.User;
-import org.yanwen.service.SeatService;
-
-@Service
+@Component
+@EnableAutoConfiguration
 public class ListenerService implements MessageListener {
     @Autowired
     private SeatService seatService;
@@ -41,7 +39,7 @@ public class ListenerService implements MessageListener {
                 Seat seat = new Seat();
                 seat.setId(seatID);
                 if (seatReserved(seat))
-                    setSeatStatus(seat,Status.RESERVED);
+                    setSeatStatus(seat, Status.RESERVED);
                 else
                     setSeatStatus(seat, Status.AVAILABLE);
             }

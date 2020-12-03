@@ -9,12 +9,14 @@
         <module name="mvc" />
         <module name="consumer" />
         <module name="persistence" />
+        <module name="TicketService-core" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="consumer (1)" target="1.8" />
       <module name="consumer (2)" target="1.8" />
       <module name="persistence" target="1.7" />
+      <module name="TicketService-Core" target="1.7" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

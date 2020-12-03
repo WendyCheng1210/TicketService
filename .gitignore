@@ -1,0 +1,10 @@
+.DS_Store
+.idea/
+out
+*.iml
+*.class
+target
+*.properties
+workspace.xml
+lib
+kube_*.yaml

@@ -13,6 +13,7 @@
   <modules>
     <module>mvc</module>
     <module>consumer</module>
+    <module>TicketService-core</module>
   </modules>
 
 </project>
