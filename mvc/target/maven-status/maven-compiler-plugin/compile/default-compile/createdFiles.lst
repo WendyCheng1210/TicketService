@@ -1,5 +1,2 @@
-org/yanwen/mvc/util/HibernateUtil.class
-org/yanwen/mvc/config/HibernateConfig.class
-org/yanwen/mvc/controller/SeatController.class
-org/yanwen/mvc/config/AWSConfig.class
 org/yanwen/mvc/ApplicationBootstrap.class
+org/yanwen/mvc/controller/SeatController.class

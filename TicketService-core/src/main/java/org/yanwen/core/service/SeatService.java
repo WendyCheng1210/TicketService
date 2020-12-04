@@ -1,4 +1,4 @@
-package org.yanwen.core.service.jms;
+package org.yanwen.core.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.yanwen.core.domain.Seat;

@@ -1,15 +1,2 @@
-/Users/Wendy/YanwenSDE/TicketService/mvc/src/main/java/org/yanwen/mvc/model/User.java
 /Users/Wendy/YanwenSDE/TicketService/mvc/src/main/java/org/yanwen/mvc/ApplicationBootstrap.java
-/Users/Wendy/YanwenSDE/TicketService/mvc/src/main/java/org/yanwen/mvc/service/SeatService.java
-/Users/Wendy/YanwenSDE/TicketService/mvc/src/main/java/org/yanwen/mvc/config/HibernateConfig.java
-/Users/Wendy/YanwenSDE/TicketService/mvc/src/main/java/org/yanwen/mvc/util/HibernateUtil.java
-/Users/Wendy/YanwenSDE/TicketService/mvc/src/main/java/org/yanwen/mvc/service/UserService.java
-/Users/Wendy/YanwenSDE/TicketService/mvc/src/main/java/org/yanwen/mvc/repository/UserDao.java
-/Users/Wendy/YanwenSDE/TicketService/mvc/src/main/java/org/yanwen/mvc/model/Status.java
-/Users/Wendy/YanwenSDE/TicketService/mvc/src/main/java/org/yanwen/mvc/repository/SeatDao.java
-/Users/Wendy/YanwenSDE/TicketService/mvc/src/main/java/org/yanwen/mvc/repository/UserDaoImpl.java
 /Users/Wendy/YanwenSDE/TicketService/mvc/src/main/java/org/yanwen/mvc/controller/SeatController.java
-/Users/Wendy/YanwenSDE/TicketService/mvc/src/main/java/org/yanwen/mvc/model/Seat.java
-/Users/Wendy/YanwenSDE/TicketService/mvc/src/main/java/org/yanwen/mvc/config/AWSConfig.java
-/Users/Wendy/YanwenSDE/TicketService/mvc/src/main/java/org/yanwen/mvc/repository/SeatDaoImpl.java
-/Users/Wendy/YanwenSDE/TicketService/mvc/src/main/java/org/yanwen/mvc/service/MessageService.java
