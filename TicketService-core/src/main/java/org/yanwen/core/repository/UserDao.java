@@ -10,4 +10,5 @@ public interface UserDao {
     User getByID(Long Id);
     User getEagerBy(Long Id);
     void delete(User user);
+    User update(User user);
 }

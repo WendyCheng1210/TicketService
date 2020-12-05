@@ -14,6 +14,7 @@ import org.yanwen.core.domain.Status;
 import org.yanwen.core.domain.User;
 
 import java.util.List;
+import java.util.Random;
 
 @Repository
 public class SeatDaoImpl implements SeatDao {
@@ -22,6 +23,9 @@ public class SeatDaoImpl implements SeatDao {
 
     @Autowired
     private SessionFactory sessionFactory;
+
+    @Autowired
+    private UserDao userDao;
 
     @Override
     public Seat getBy(long id) {
@@ -130,12 +134,30 @@ public class SeatDaoImpl implements SeatDao {
 
     @Override
     public boolean reserveSeats(List<Seat> seats, User user) {
+        boolean allHold = true;
         for (Seat seat: seats){
-            seat.setStatus(Status.RESERVED);
-            seat.setUser(user);
-            Seat result = update(seat);
-            if (result == null)
-                return false;
+//            seat.setStatus(Status.RESERVED);
+            if (seat.getStatus() != Status.HOLD){
+//                create a confirmation code
+                allHold = false;
+            }
+//            seat.setUser(user);
+//            Seat result = update(seat);
+//            if (result == null)
+//                return false;
+        }
+        if (allHold){
+            //confirmation code
+            Random rand = new Random();
+            int randomCode = rand.nextInt(100000);
+
+            //assign cc to user
+            user.setConfirmation_code(Integer.toString(randomCode));
+
+            //update user to database
+            userDao.update(user);
+        }else {
+            return false;
         }
         return true;
     }

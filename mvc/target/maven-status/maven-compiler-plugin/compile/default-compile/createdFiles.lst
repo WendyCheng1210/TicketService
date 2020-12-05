@@ -1,2 +1,3 @@
 org/yanwen/mvc/ApplicationBootstrap.class
 org/yanwen/mvc/controller/SeatController.class
+org/yanwen/mvc/controller/UserController.class
